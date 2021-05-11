@@ -1,0 +1,24 @@
+terraform {
+  source = "git::git@github.com:terraform-aws-modules/terraform-aws-apigateway-v2.git?ref=v1.0.0"
+}
+
+include {
+  path = find_in_parent_folders()
+}
+
+###########################################################
+# View all available inputs for this module:
+# https://registry.terraform.io/modules/terraform-aws-modules/apigateway-v2/aws/1.0.0?tab=inputs
+###########################################################
+inputs = {
+  # The name of the API
+  # type: string
+  name = "apigateway-couriercurrentlocation"
+
+  # The API protocol. Valid values: HTTP, WEBSOCKET
+  # type: string
+  protocol_type = "HTTP"
+  
+  http_method = "POST"
+
+}
